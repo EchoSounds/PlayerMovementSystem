@@ -9,6 +9,10 @@ namespace ronan.player
 {
     public class Climbing : MonoBehaviour
     {
+        /// <summary>
+        /// fix player being able to bounce against the wall to reset their climb
+        /// </summary>
+
         [Header("Reference")]
         public Transform orientation;
         public Rigidbody rb;

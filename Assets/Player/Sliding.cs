@@ -4,7 +4,7 @@ using UnityEditor.Experimental;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace ronan.player
+namespace ronan.player {
     public class Sliding : MonoBehaviour
     {
         [Header("References")]
