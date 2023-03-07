@@ -10,7 +10,7 @@ namespace ronan.player
     public class PlayerMovement : MonoBehaviour
     {
         [Header("Movement")]
-        [SerializeField] private float moveSpeed;
+        public float moveSpeed;
         public float walkSpeed = 7;
         public float sprintSpeed = 10;
         public float slideSpeed = 30f;

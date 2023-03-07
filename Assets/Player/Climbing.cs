@@ -60,6 +60,7 @@ namespace ronan.player
             StateMachine();
 
             if (climbing) ClimbingMovement();
+            if (wallFront && !climbing && climbTimer < maxClimbTime && climbTimer > 0) rb.velocity = new Vector3(rb.velocity.x, -4, rb.velocity.z);
         }
         private void WallCheck()
         {
