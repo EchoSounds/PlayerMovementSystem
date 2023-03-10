@@ -3470,14 +3470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53f555b88b04c904fb39724ef4284fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 0
-  cam: {fileID: 963194228}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
-  movementSpeed: {x: 0, y: 0, z: 0}
-  rot: {x: 0, y: 0, z: 0}
-  fwd: 0
-  side: 0
-  camY: 0
+  cameraObject: {fileID: 963194228}
 --- !u!43 &1382433956
 Mesh:
   m_ObjectHideFlags: 0
