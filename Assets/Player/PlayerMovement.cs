@@ -47,7 +47,8 @@ namespace ronan.player
 
 
 
-        public Transform orientation;
+        public Transform camOrientation;
+        public Transform playerOrientation;
         public bool sliding;
         public bool climbing;
 
@@ -99,6 +100,8 @@ namespace ronan.player
         private void Update()
         {        
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+
+
 
             onSlide = OnSlope();
 
@@ -232,7 +235,8 @@ namespace ronan.player
 
         private void MovePlayer()
         {
-            moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+            moveDirection = camOrientation.forward * verticalInput + camOrientation.right * horizontalInput;
 
             if (OnSlope() && !exitingSlope)
             {

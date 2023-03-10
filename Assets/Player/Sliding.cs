@@ -8,7 +8,8 @@ namespace ronan.player {
     public class Sliding : MonoBehaviour
     {
         [Header("References")]
-        public Transform orientation;
+        public Transform camOrientation;
+        public Transform playerOrientation;
         public Transform playerObj;
         private Rigidbody rb;
         private PlayerMovement pm;
@@ -80,7 +81,7 @@ namespace ronan.player {
 
         private void SlidingMovement()
         {
-            Vector3 inputDirection = orientation.forward * movementInput.y + orientation.right * movementInput.x;
+            Vector3 inputDirection = camOrientation.forward * movementInput.y + camOrientation.right * movementInput.x;
 
             // sliding normal
             if (!pm.OnSlope() || rb.velocity.y > -0.1f)

@@ -14,7 +14,8 @@ namespace ronan.player
         /// </summary>
 
         [Header("Reference")]
-        public Transform orientation;
+        public Transform camOrientation;
+        public Transform playerOrientation;
         public Rigidbody rb;
         public LayerMask whatIsWall;
         public PlayerInputs pi;
@@ -64,8 +65,8 @@ namespace ronan.player
         }
         private void WallCheck()
         {
-            wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, whatIsWall);
-            wallLookAngle = Vector2.Angle(orientation.forward, -frontWallHit.normal);
+            wallFront = Physics.SphereCast(transform.position, sphereCastRadius, playerOrientation.forward, out frontWallHit, detectionLength, whatIsWall);
+            wallLookAngle = Vector2.Angle(playerOrientation.forward, -frontWallHit.normal);
 
             if (pm.grounded)
             {
